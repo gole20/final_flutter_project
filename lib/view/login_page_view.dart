@@ -30,16 +30,16 @@ class LoginPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Spacer(), // Pushes content towards the center
+            const Spacer(), 
 
-            // Logo and Login Form
+            
             Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Logo Section
+                    
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.black,
@@ -51,7 +51,7 @@ class LoginPage extends StatelessWidget {
                           CircleAvatar(
                             backgroundColor: Colors.transparent,
                             radius: 40.0,
-                            child: Image.asset('assets/hello.png'), // Image Path
+                            child: Image.asset('assets/hello.png'), 
                           ),
                           const SizedBox(height: 10.0),
                           const Text(
@@ -74,7 +74,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 30.0),
 
-                    // Email Input
+                   
                     TextField(
                       decoration: InputDecoration(
                         hintText: 'Email',
@@ -110,7 +110,6 @@ class LoginPage extends StatelessWidget {
 
                     const SizedBox(height: 20.0),
 
-                    // Sign Up Section
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -133,15 +132,15 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            const Spacer(), // Pushes button to the bottom
+            const Spacer(), 
 
-            // Back Button Section
+            
             GestureDetector(
               onTap: () {
-                Navigator.pop(context); // Navigate back to the Splash Screen
+                Navigator.pop(context); 
               },
               child: Container(
-                margin: const EdgeInsets.only(bottom: 40), // Add bottom spacing
+                margin: const EdgeInsets.only(bottom: 40), 
                 decoration: const BoxDecoration(
                   color: Colors.black,
                   shape: BoxShape.circle,

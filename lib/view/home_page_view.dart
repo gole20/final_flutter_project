@@ -12,6 +12,7 @@ class HomePageView extends StatelessWidget {
   }
 }
 
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -24,20 +25,20 @@ class HomePage extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.menu, color: Colors.black),
           onPressed: () {
-            // Menu action
+            
           },
         ),
         actions: [
           IconButton(
             icon: const Icon(Icons.search, color: Colors.black),
             onPressed: () {
-              // Search action
+              
             },
           ),
           IconButton(
             icon: const Icon(Icons.notifications, color: Colors.black),
             onPressed: () {
-              // Notifications action
+              
             },
           ),
         ],
@@ -70,7 +71,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 20.0),
 
-              // Search Bar
+             
               TextField(
                 decoration: InputDecoration(
                   prefixIcon: const Icon(Icons.search, color: Colors.black),
@@ -97,7 +98,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 20.0),
 
-              // Shoes Grid
+              
               Expanded(
                 child: GridView.count(
                   crossAxisCount: 2,
@@ -188,3 +189,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
