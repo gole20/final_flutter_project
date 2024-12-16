@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePageView extends StatelessWidget {
+class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
 
+  @override
+  State<HomePageView> createState() => _HomePageViewState();
+}
+
+class _HomePageViewState extends State<HomePageView> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -105,10 +110,10 @@ class HomePage extends StatelessWidget {
                   mainAxisSpacing: 20.0,
                   crossAxisSpacing: 20.0,
                   children: [
-                    _buildShoeCard("Casual Sneakers", "assets/casual.png", 5.0),
-                    _buildShoeCard("NB 530 Sneakers", "assets/nb530.png", 4.5),
-                    _buildShoeCard("Air Jordan 1 Low OG", "assets/airjordan.png", 4.8),
-                    _buildShoeCard("Fries", "assets/fries.png", 5.0),
+                    Image.asset('assets/nike.png', fit: BoxFit.cover),
+          Image.asset('assets/new.png', fit: BoxFit.cover),
+          Image.asset('assets/jordan.png', fit: BoxFit.cover),
+          Image.asset('assets/balance.png', fit: BoxFit.cover),
                   ],
                 ),
               ),

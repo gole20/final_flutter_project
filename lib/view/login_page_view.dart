@@ -147,7 +147,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 padding: const EdgeInsets.all(20),
                 child: const Icon(
-                  Icons.arrow_back,
+                  Icons.next_plan_outlined,
                   color: Colors.white,
                   size: 30,
                 ),
