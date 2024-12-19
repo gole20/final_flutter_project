@@ -56,6 +56,7 @@ class SignUpPageView extends StatelessWidget {
                           color: Colors.yellow,
                           fontWeight: FontWeight.bold,
                           fontSize: 18.0,
+                          fontFamily: 'Montserrat-Bold',
                         ),
                       ),
                       const Text(
@@ -63,6 +64,7 @@ class SignUpPageView extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 12.0,
+                          fontFamily: 'Montserrat-Bold',
                         ),
                       ),
                     ],
@@ -72,6 +74,7 @@ class SignUpPageView extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: 'Email',
+                    hintStyle: const TextStyle(fontFamily: 'Montserrat-Bold'),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -84,6 +87,7 @@ class SignUpPageView extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: 'Password',
+                    hintStyle: const TextStyle(fontFamily: 'Montserrat-Bold'),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -96,6 +100,7 @@ class SignUpPageView extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: 'Confirm password',
+                    hintStyle: const TextStyle(fontFamily: 'Montserrat-Bold'),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -120,6 +125,7 @@ class SignUpPageView extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.0,
+                        fontFamily: 'Montserrat-Bold',
                       ),
                     ),
                   ),
@@ -134,6 +140,7 @@ class SignUpPageView extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.black,
                       decoration: TextDecoration.underline,
+                      fontFamily: 'Montserrat-Bold',
                     ),
                   ),
                 ),

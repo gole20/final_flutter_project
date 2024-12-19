@@ -1,4 +1,4 @@
-import 'package:final_flutter_project/view/login_page_view.dart';
+import 'package:final_flutter_project/view/signup_page_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,14 +13,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Montserrat-Bold',
-        primarySwatch: Colors.blue,
         textTheme: const TextTheme(
-          displayLarge: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
-          bodyLarge: TextStyle(fontSize: 14.0),
+          bodyLarge: TextStyle(
+            fontFamily: 'Montserrat-Bold',
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: 'Montserrat-Bold',
+          ),
         ),
       ),
-      home: const LoginPageView(),
+      home: const SignUpPageView(),
     );
   }
 }
