@@ -14,7 +14,6 @@ class HomePageView extends StatefulWidget {
 class _HomePageViewState extends State<HomePageView> {
   int _selectedIndex = 0;
 
-  // Pages for bottom navigation
   final List<Widget> _pages = [
     const HomePage(),
     const OrderPage(),
@@ -79,7 +78,6 @@ class _HomePageViewState extends State<HomePageView> {
                   style: TextStyle(fontSize: 18),
                 ),
                 onTap: () {
-                  // Handle logout logic
                   Navigator.pop(context);
                 },
               ),
@@ -110,7 +108,6 @@ class _HomePageViewState extends State<HomePageView> {
   }
 }
 
-// Home Page
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -184,7 +181,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// Order Page
 class OrderPage extends StatelessWidget {
   const OrderPage({super.key});
 
@@ -199,7 +195,6 @@ class OrderPage extends StatelessWidget {
   }
 }
 
-// My List Page
 class MyListPage extends StatelessWidget {
   const MyListPage({super.key});
 
@@ -214,7 +209,6 @@ class MyListPage extends StatelessWidget {
   }
 }
 
-// Profile Page
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
