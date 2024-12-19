@@ -8,7 +8,7 @@ class SignUpPageView extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        height: double.infinity, // Ensures it takes the full screen height
+        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.white, Colors.grey],

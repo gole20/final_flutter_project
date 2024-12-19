@@ -137,7 +137,6 @@ class LoginPageView extends StatelessWidget {
               ],
             ),
           ),
-          // Top-left IconButton
           Positioned(
             top: 40,
             left: 20,
@@ -148,7 +147,6 @@ class LoginPageView extends StatelessWidget {
                 size: 28,
               ),
               onPressed: () {
-                // Handle back action
                 Navigator.pop(context);
               },
             ),

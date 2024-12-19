@@ -1,4 +1,4 @@
-import 'package:final_flutter_project/view/onboarding_page_view.dart';
+import 'package:final_flutter_project/view/login_page_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           bodyLarge: TextStyle(fontSize: 14.0),
         ),
       ),
-      home: const OnboardingPageView(),
+      home: const LoginPageView(),
     );
   }
 }
