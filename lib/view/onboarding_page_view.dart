@@ -1,20 +1,9 @@
-import 'package:final_flutter_project/view/shoe_splash_view.dart';
 import 'package:flutter/material.dart';
+
+import 'shoe_splash_view.dart';
 
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
-    );
-  }
-}
-
-class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +31,6 @@ class OnboardingScreen extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.yellow,
               padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
             ),
             child: const Text(
               'Get Started',
@@ -56,25 +42,6 @@ class OnboardingScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: const Center(
-        child: Text(
-          'Welcome to KickBack Shoes!',
-          style: TextStyle(fontSize: 24),
-        ),
       ),
     );
   }

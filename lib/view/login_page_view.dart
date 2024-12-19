@@ -1,5 +1,6 @@
-import 'package:final_flutter_project/view/signup_page_view.dart';
 import 'package:flutter/material.dart';
+
+import 'signup_page_view.dart';
 
 class LoginPageView extends StatelessWidget {
   const LoginPageView({super.key});
@@ -10,11 +11,11 @@ class LoginPageView extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Colors.white, Colors.grey.shade800],
+                colors: [Colors.white, Colors.grey],
               ),
             ),
             child: Column(
@@ -92,63 +93,28 @@ class LoginPageView extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey.shade700,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 12),
-                  ),
                   onPressed: () {},
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: const Text('Login'),
                 ),
                 const Spacer(),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignUpPageView(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      color: Colors.grey.shade700,
-                      child: const Center(
-                        child: Text(
-                          'Sign Up',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPageView(),
                       ),
+                    );
+                  },
+                  child: const Text(
+                    'Don’t have an account? Sign up',
+                    style: TextStyle(
+                      color: Colors.black,
+                      decoration: TextDecoration.underline,
                     ),
                   ),
                 ),
               ],
-            ),
-          ),
-          Positioned(
-            top: 40,
-            left: 20,
-            child: IconButton(
-              icon: const Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 28,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
             ),
           ),
         ],
