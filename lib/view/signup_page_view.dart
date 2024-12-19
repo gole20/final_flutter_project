@@ -7,6 +7,8 @@ class SignUpPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity,
+        height: double.infinity, // Ensures it takes the full screen height
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.white, Colors.grey],
@@ -103,9 +105,7 @@ class SignUpPageView extends StatelessWidget {
                 ),
                 const SizedBox(height: 30.0),
                 ElevatedButton(
-                  onPressed: () {
-                    // Handle sign-up action
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(

@@ -21,9 +21,16 @@ dev_dependencies:
   flutter_lints: ^2.0.1
 
 flutter:
+  uses-material-design: true
+
   assets:
     - assets/hello.png
     - assets/nike.png
     - assets/new.png
     - assets/jordan.png
     - assets/balance.png
+
+  fonts:
+    - family: Montserrat-Bold
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf

@@ -1,7 +1,6 @@
 import 'package:final_flutter_project/view/shoe_splash_view.dart';
 import 'package:flutter/material.dart';
 
-
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({super.key});
 
@@ -24,17 +23,15 @@ class OnboardingScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Display the image
           Center(
             child: Image.asset(
-              'assets/hello.png', 
+              'assets/hello.png',
               width: 300,
               height: 300,
               fit: BoxFit.cover,
             ),
           ),
           const SizedBox(height: 30),
-          // "Get Started" Button
           ElevatedButton(
             onPressed: () {
               Navigator.push(

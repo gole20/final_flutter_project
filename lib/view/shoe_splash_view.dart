@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'login_page_view.dart'; // Import LoginPageView
-import 'home_page_view.dart'; // Import HomePageView
+
+import 'home_page_view.dart';
+import 'login_page_view.dart';
 
 class ShoeSplashView extends StatelessWidget {
   const ShoeSplashView({super.key});
@@ -20,7 +21,12 @@ class ShoeSplashView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
+              Image.asset(
+                'assets/hello.png',
+                width: 400,
+                height: 300,
+              ),
+              const SizedBox(height: 20),
               const Column(
                 children: [
                   Text(
@@ -50,14 +56,10 @@ class ShoeSplashView extends StatelessWidget {
                   ),
                 ],
               ),
-
               const SizedBox(height: 250),
-
-              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -88,10 +90,7 @@ class ShoeSplashView extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   const SizedBox(width: 20),
-
-                  
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
