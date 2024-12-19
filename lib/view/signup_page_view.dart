@@ -5,21 +5,6 @@ class SignUpPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const SignUpPage(),
-      theme: ThemeData(
-        useMaterial3: true, // Optional for modern design
-      ),
-    );
-  }
-}
-
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -35,7 +20,6 @@ class SignUpPage extends StatelessWidget {
                 const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
             child: Column(
               children: [
-                // Back Button
                 Align(
                   alignment: Alignment.topLeft,
                   child: IconButton(
@@ -47,7 +31,6 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                // Logo Section
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.black,
@@ -60,7 +43,7 @@ class SignUpPage extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         radius: 40.0,
                         child: Image.asset(
-                          'assets/hello.png', // Replace with your actual asset
+                          'assets/hello.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -84,7 +67,6 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30.0),
-                // Form Fields
                 TextField(
                   decoration: InputDecoration(
                     hintText: 'Email',
@@ -120,7 +102,6 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30.0),
-                // Sign-Up Button
                 ElevatedButton(
                   onPressed: () {
                     // Handle sign-up action
@@ -144,10 +125,9 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                // Redirect to Login
                 GestureDetector(
                   onTap: () {
-                    // Handle redirection to login
+                    Navigator.pop(context);
                   },
                   child: const Text(
                     'Already have an account? Log in',

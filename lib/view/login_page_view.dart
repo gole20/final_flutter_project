@@ -1,155 +1,140 @@
+import 'package:final_flutter_project/view/signup_page_view.dart';
 import 'package:flutter/material.dart';
-import 'shoe_splash_view.dart'; // Import ShoeSplashView
-import 'signup_page_view.dart'; // Import SignUpPageView
 
 class LoginPageView extends StatelessWidget {
   const LoginPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
-    );
-  }
-}
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.white, Colors.grey],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
+            colors: [Colors.white, Colors.grey.shade800],
           ),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Spacer(), 
-
-            
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Colors.transparent,
-                            radius: 40.0,
-                            child: Image.asset('assets/hello.png'), 
-                          ),
-                          const SizedBox(height: 10.0),
-                          const Text(
-                            'KickBack Shoes',
-                            style: TextStyle(
-                              color: Colors.yellow,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18.0,
-                            ),
-                          ),
-                          const Text(
-                            'Comfort made just for your feet.',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12.0,
-                            ),
-                          ),
-                        ],
-                      ),
+            const SizedBox(height: 100),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/hello.png',
+                    height: 100,
+                    width: 300,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'KickBack Shoes',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.yellow,
                     ),
-                    const SizedBox(height: 30.0),
-
-                   
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Email',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 20.0),
-
-                    // Password Input
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        hintText: 'Password',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 10.0),
-
-                    // Forget Password Section
-                    const Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'Forget password?',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ),
-
-                    const SizedBox(height: 20.0),
-
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignUpPageView(),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        'Sign Up',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
+                  const Text(
+                    'Casual comfort for your everyday kicks.',
+                    style: TextStyle(fontSize: 12, color: Colors.yellow),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 40),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                 ),
               ),
             ),
-            const Spacer(), 
-
-            
+            const SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                obscureText: true,
+              ),
+            ),
+            const SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                Navigator.pop(context); 
+                // Handle forgot password action
               },
-              child: Container(
-                margin: const EdgeInsets.only(bottom: 40), 
-                decoration: const BoxDecoration(
-                  color: Colors.black,
-                  shape: BoxShape.circle,
-                ),
-                padding: const EdgeInsets.all(20),
-                child: const Icon(
-                  Icons.next_plan_outlined,
+              child: const Text(
+                'Forget password?',
+                style: TextStyle(
                   color: Colors.white,
-                  size: 30,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.grey.shade700,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 80, vertical: 12), // Reduced button size
+              ),
+              onPressed: () {
+                // Handle login action
+              },
+              child: const Text(
+                'Login',
+                style: TextStyle(
+                    color: Colors.white), // Changed text color to white
+              ),
+            ),
+            const Spacer(),
+            // Sign Up Button
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpPageView(),
+                    ),
+                  );
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  width: MediaQuery.of(context).size.width * 0.6,
+                  color: Colors.grey.shade700,
+                  child: const Center(
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
