@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const HomePageView());
-}
-
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
 

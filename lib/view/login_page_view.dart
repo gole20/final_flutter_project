@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'signup_page_view.dart';
+import 'home_page_view.dart'; // Import your home page here
 
 class LoginPageView extends StatelessWidget {
   const LoginPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Controllers for the text fields
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+
     return Scaffold(
       body: Stack(
         children: [
@@ -55,6 +59,7 @@ class LoginPageView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: TextField(
+                    controller: emailController,
                     decoration: InputDecoration(
                       hintText: 'Email',
                       filled: true,
@@ -69,6 +74,7 @@ class LoginPageView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: TextField(
+                    controller: passwordController,
                     decoration: InputDecoration(
                       hintText: 'Password',
                       filled: true,
@@ -93,18 +99,43 @@ class LoginPageView extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Check credentials
+                    if (emailController.text == "admin@gmail.com" &&
+                        passwordController.text == "admin") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePageView(),
+                        ),
+                      );
+                    } else {
+                      // Show an error message
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: const Text("Error"),
+                            content: const Text("Invalid email or password"),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Text("OK"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }
+                  },
                   child: const Text('Login'),
                 ),
                 const Spacer(),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SignUpPageView(),
-                      ),
-                    );
+                    // Navigate to the signup page (if implemented)
                   },
                   child: const Text(
                     'Don’t have an account? Sign up',
@@ -115,6 +146,20 @@ class LoginPageView extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+          Positioned(
+            top: 40,
+            left: 20,
+            child: IconButton(
+              icon: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+                size: 28,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ),
         ],
