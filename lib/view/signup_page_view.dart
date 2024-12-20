@@ -110,7 +110,9 @@ class SignUpPageView extends StatelessWidget {
                 ),
                 const SizedBox(height: 30.0),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Add sign-up functionality here
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(

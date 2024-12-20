@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home_page_view.dart';
+import 'signup_page_view.dart'; // Import the SignUpPageView
 
 class LoginPageView extends StatelessWidget {
   const LoginPageView({super.key});
@@ -91,7 +92,7 @@ class LoginPageView extends StatelessWidget {
                   child: const Text(
                     'Forget password?',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       decoration: TextDecoration.underline,
                     ),
                   ),
@@ -127,11 +128,23 @@ class LoginPageView extends StatelessWidget {
                       );
                     }
                   },
-                  child: const Text('Login'),
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
                 const Spacer(),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPageView(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'Don’t have an account? Sign up',
                     style: TextStyle(
