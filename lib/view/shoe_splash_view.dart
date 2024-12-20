@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'home_page_view.dart';
 import 'login_page_view.dart';
 
 class ShoeSplashView extends StatelessWidget {
@@ -57,51 +56,29 @@ class ShoeSplashView extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 250),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LoginPageView(),
-                        ),
-                      );
-                    },
-                    child: const Row(
-                      children: [
-                        Icon(Icons.login, color: Colors.white),
-                        SizedBox(width: 10),
-                        Text(
-                          'Login',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
+              SizedBox(
+                width: 150,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPageView(),
+                      ),
+                    );
+                  },
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.login, color: Colors.white),
+                      SizedBox(width: 5),
+                      Text(
+                        'Login',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomePageView(),
-                        ),
-                      );
-                    },
-                    child: const Row(
-                      children: [
-                        Icon(Icons.home, color: Colors.white),
-                        SizedBox(width: 10),
-                        Text(
-                          'Home',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                ),
               ),
             ],
           ),

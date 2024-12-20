@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'home_page_view.dart'; // Import your home page here
+import 'home_page_view.dart';
 
 class LoginPageView extends StatelessWidget {
   const LoginPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Controllers for the text fields
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
 
@@ -100,7 +99,6 @@ class LoginPageView extends StatelessWidget {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Check credentials
                     if (emailController.text == "admin@gmail.com" &&
                         passwordController.text == "admin") {
                       Navigator.push(
@@ -110,7 +108,6 @@ class LoginPageView extends StatelessWidget {
                         ),
                       );
                     } else {
-                      // Show an error message
                       showDialog(
                         context: context,
                         builder: (context) {
@@ -134,9 +131,7 @@ class LoginPageView extends StatelessWidget {
                 ),
                 const Spacer(),
                 GestureDetector(
-                  onTap: () {
-                    // Navigate to the signup page (if implemented)
-                  },
+                  onTap: () {},
                   child: const Text(
                     'Don’t have an account? Sign up',
                     style: TextStyle(

@@ -25,6 +25,10 @@ flutter:
 
   assets:
     - assets/hello.png
+    - assets/balance.png
+    - assets/jordan.png
+    - assets/new.png
+    - assets/nike.png
 
   fonts:
     - family: Montserrat-Bold
