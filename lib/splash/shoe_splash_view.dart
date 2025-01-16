@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'login_page_view.dart';
+import '../features/shoe/presentation/view/login_page_view.dart';
 
 class ShoeSplashView extends StatelessWidget {
   const ShoeSplashView({super.key});

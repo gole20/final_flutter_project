@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'shoe_splash_view.dart';
+import '../splash/shoe_splash_view.dart';
 
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({super.key});

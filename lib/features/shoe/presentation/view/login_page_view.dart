@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home_page_view.dart';
+import '../../../../home/home_page_view.dart';
 import 'signup_page_view.dart'; // Import the SignUpPageView
 
 class LoginPageView extends StatelessWidget {
