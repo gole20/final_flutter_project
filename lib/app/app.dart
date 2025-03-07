@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Kickback Shoes',
+      title: 'vvvh',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const ShoeSplashView(),
     );
