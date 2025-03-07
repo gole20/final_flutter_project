@@ -940,7 +940,7 @@ class OrderPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Total Amount:',
+                    'Total Amou:',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
