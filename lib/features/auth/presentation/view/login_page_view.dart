@@ -43,11 +43,11 @@ class LoginPageView extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        // Image.asset(
-                        //   'assets/hello.png',
-                        //   height: 120,
-                        //   width: 300,
-                        // ),
+                        Image.asset(
+                          'assets/hello.png',
+                          height: 120,
+                          width: 300,
+                        ),
                         const SizedBox(height: 16),
                         const Text(
                           'KickBack Shoes',
