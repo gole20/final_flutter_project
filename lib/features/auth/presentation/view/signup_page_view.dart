@@ -100,12 +100,12 @@ class SignUpPageView extends StatelessWidget {
                     icon: Icons.email_outlined,
                     hint: 'Email',
                   ),
-                  // const SizedBox(height: 16),
-                  // _buildInputField(
-                  //   icon: Icons.phone_outlined,
-                  //   hint: 'Phone Number',
-                  //   keyboardType: TextInputType.phone,
-                  // ),
+                  const SizedBox(height: 16),
+                  _buildInputField(
+                    icon: Icons.phone_outlined,
+                    hint: 'Phone Number',
+                    keyboardType: TextInputType.phone,
+                  ),
                   const SizedBox(height: 16),
                   _buildInputField(
                     icon: Icons.location_on_outlined,
